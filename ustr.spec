@@ -1,12 +1,15 @@
 Name:      ustr
 Version:   1.0.4
-Release:   28
+Release:   29
 Summary:   Micro String API for C
 License:   MIT or LGPLv2+ or BSD
 URL:       http://www.and.org/ustr/
 Source0:   http://www.and.org/ustr/%{version}/%{name}-%{version}.tar.bz2
 #Acknowledge Patch0 from Fedora
 Patch0:    c99-inline.patch
+
+BuildRequires: make
+BuildRequires: gcc
 
 %description
  Micro string api is easier to be integrated into existing code
@@ -99,5 +102,8 @@ make $@ install-multilib-linux prefix=%{_prefix} \
 
 
 %changelog
+* Fri Jun 4 2021 zoulin<zoulin13@huawei.com> - 1.0.4-29
+- Add gcc and make to BuildRequires to use gcc command
+
 * Tue Sep 3 2019 lizaiwang<lizaiwang1@huawei.com> - 1.0.4-28
 - Init package
