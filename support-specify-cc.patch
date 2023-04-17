@@ -1,0 +1,12 @@
+diff -up ustr-1.0.4/Makefile.orig2 ustr-1.0.4/Makefile
+--- ustr-1.0.4/Makefile.orig2	2023-04-17 17:41:55.289194228 +0800
++++ ustr-1.0.4/Makefile	2023-04-17 17:41:58.941200484 +0800
+@@ -28,7 +28,7 @@ MBINDIR=$(libexecdir)/ustr-$(VERS_FULL)
+ ###############################################################################
+ HIDE=@
+ 
+-CC = cc
++CC ?= cc
+ AR = ar
+ RANLIB = ranlib
+ LDCONFIG = /sbin/ldconfig
